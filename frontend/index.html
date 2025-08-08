@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Text Adventure</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="language-selection">
+      <h1>Choose your language</h1>
+      <button id="lang-en">English</button>
+      <button id="lang-pt">Português (BR)</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+      <div id="image-container" class="hidden">
+        <img id="scene-image" src="" alt="Scene visualization" />
+        <div id="loading-indicator">Generating scene...</div>
+      </div>
+      <div id="story-output"></div>
+      <div class="input-container">
+        <span>></span>
+        <input type="text" id="command-input" autofocus />
+      </div>
+      <button id="new-case-button" class="hidden">Iniciar Novo Caso</button>
+    </div>
+    <script>
+      window.BACKEND_URL = "__BACKEND_URL__"; // Placeholder for Vercel environment variable
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

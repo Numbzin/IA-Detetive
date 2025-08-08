@@ -1,0 +1,198 @@
+body {
+  background-color: #000;
+  color: #00ff41;
+  font-family: "VT323", monospace;
+  font-size: 1.25rem; /* Converted from 20px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  max-width: 800px;
+  width: 90%; /* Added for responsiveness */
+  border: 2px solid #00ff41;
+  padding: 1.25rem; /* Converted from 20px */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box; /* Added for consistent padding */
+}
+
+#image-container {
+  margin-bottom: 0.9375rem; /* Converted from 15px */
+  border: 2px solid #00ff41;
+}
+
+#scene-image {
+  width: 100%;
+  display: block;
+}
+
+#loading-indicator {
+  padding: 1.25rem; /* Converted from 20px */
+  text-align: center;
+  animation: blink 1.5s linear infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#story-output {
+  flex-grow: 1;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  padding-right: 0.9375rem; /* Converted from 15px */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1.25rem; /* Converted from 20px */
+}
+
+.input-container span {
+  margin-right: 0.625rem; /* Converted from 10px */
+}
+
+#command-input {
+  background-color: transparent;
+  border: none;
+  color: #00ff41;
+  font-family: "VT323", monospace;
+  font-size: 1.25rem; /* Converted from 20px */
+  width: 100%;
+  outline: none;
+}
+
+#language-selection {
+  text-align: center;
+  padding: 1.25rem; /* Converted from 20px */
+  border: 2px solid #00ff41;
+  max-width: 800px;
+  width: 90%; /* Added for responsiveness */
+  box-sizing: border-box; /* Added for consistent padding */
+}
+
+#language-selection h1 {
+  margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+#language-selection button {
+  background-color: #00ff41;
+  border: none;
+  color: #000;
+  font-family: "VT323", monospace;
+  font-size: 1.375rem; /* Converted from 22px */
+  padding: 0.625rem 1.25rem; /* Converted from 10px 20px */
+  cursor: pointer;
+  margin: 0 0.625rem; /* Converted from 0 10px */
+}
+
+#language-selection button:hover {
+  background-color: #00dd38;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.user-command {
+  color: #00ffff;
+}
+
+.user-message {
+  color: #00ffff;
+  margin-bottom: 0.625rem; /* Converted from 10px */
+}
+
+.ai-message {
+  color: #00ff41;
+  margin-bottom: 0.625rem; /* Converted from 10px */
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #00ff41;
+  margin: 0.9375rem 0; /* Converted from 15px 0 */
+}
+
+/* Custom scrollbar for the retro feel */
+::-webkit-scrollbar {
+  width: 0.625rem; /* Converted from 10px */
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00dd38;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Smaller base font size for tablets and smaller */
+  }
+
+  #game-container,
+  #language-selection {
+    width: 95%; /* Take up more width on smaller screens */
+    /* height: 90vh; Removed to allow content to dictate height */
+    padding: 1rem;
+  }
+
+  #language-selection button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem; /* Even smaller base font size for mobile phones */
+  }
+
+  #game-container,
+  #language-selection {
+    width: 98%; /* Almost full width on very small screens */
+    /* height: 95vh; Removed to allow content to dictate height */
+    padding: 0.8rem;
+  }
+
+  #language-selection h1 {
+    font-size: 1.5rem;
+  }
+
+  #language-selection button {
+    display: block; /* Stack buttons vertically */
+    width: 80%;
+    margin: 0.5rem auto; /* Center buttons */
+  }
+
+  .input-container {
+    flex-direction: column; /* Stack input elements */
+    align-items: flex-start;
+  }
+
+  .input-container span {
+    margin-bottom: 0.5rem;
+  }
+}
