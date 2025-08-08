@@ -92,8 +92,7 @@ Pull requests são bem-vindos! Para sugestões, abra uma issue.
 
 ## Contato
 
-Dúvidas ou sugestões? Entre em contato pelo GitHub ou pelo e-mail do mantenedor.
+Dúvidas ou sugestões? Entre em contato pelo X ou Discord (Numbzin)
 
 ---
 
-Se precisar de mais alguma informação, é só pedir!
